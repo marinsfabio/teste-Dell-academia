@@ -1,0 +1,23 @@
+{
+  "name": "teste-dell-academia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marinsfabio/teste-Dell-academia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marinsfabio/teste-Dell-academia/issues"
+  },
+  "homepage": "https://github.com/marinsfabio/teste-Dell-academia#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
