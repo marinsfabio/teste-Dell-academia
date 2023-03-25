@@ -18,12 +18,19 @@ const inicioApplicativo = ()=>{
   switch(opcaoEscolhida){
     case "1": {
       const {calculoTrechoModalidade} = require('./calculoTrecho.js')
-      return console.log(calculoTrechoModalidade());
+       console.log(calculoTrechoModalidade());
+       return inicioApplicativo()
     } ;
-    case "2": console.log("Escolheu 2");
-    break;
-    case "3": console.log("Escolheu 3");
-    break;
+    case "2": {
+      const {calculoTrechoModalidade} = require('./calculoTrecho.js') // require
+      console.log("Escolheu 2"); // chama o programa
+      return inicioApplicativo(); // return reinicio
+    }
+    case "3": {
+      const {calculoTrechoModalidade} = require('./calculoTrecho.js') // require
+      console.log("Escolheu 2"); // chama o programa
+      return inicioApplicativo(); // return reinicio
+    }
     case "sair": validarEncerramento();
     break;
     default: inicioApplicativo();

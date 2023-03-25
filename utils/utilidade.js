@@ -29,6 +29,14 @@ const cidades = [
   1142,947,2302,1789,2911,2910,3143,3450,634,1986,1224,1236,5267,1171,3804,4366,1137,4900,2579,1163,446,2792,0,2171,
   1408,3108,524,1238,1892,2119,1300,1597,2397,1428,2001,1684,4476,2178,2001,3575,1891,4109,521,1202,2607,882,2171,0]
 
+  const itens = {
+    celular: 0.5,
+    geladeira: 60,
+    freezer: 100,
+    cadeira: 5,
+    luminária: 0.8,
+    lavadora: 120
+  }
 
   const porte = {
     pequeno: 4.87,
@@ -46,16 +54,13 @@ const organizarDadosCidade = (distancia) => distancia.splice(0, 24);
     }
     return arr
   }
-
   
   const dadosFormatados = distanciaCidades(distancia, cidades);
 
  const arrayDePortes = Object.keys(porte)
 
- const validarEncerramento = ()=>{
-  return process.exit() // sai completamente do programa
-}
+ const validarEncerramento = ()=> process.exit() 
 
-  module.exports = {dadosFormatados, porte, cidades, arrayDePortes, validarEncerramento}
+  module.exports = {dadosFormatados, porte, cidades, arrayDePortes, validarEncerramento, itens}
 
 
