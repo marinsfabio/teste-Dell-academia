@@ -3,8 +3,8 @@ const {validarEncerramento} = require('./utils/utilidade.js')
 
 const executarOpcoes = ()=>{
   let opcoesParaUsuario = readline.question(`
-  1- Calcular Trecho
-  2- Calcular x
+  1- Calcular trecho
+  2- Cadastrar transporte
   3- Calcular y
   sair
   `)

@@ -1,31 +1,12 @@
 const readline = require('readline-sync');
 const {dadosFormatados, porte, cidades, arrayDePortes, validarEncerramento } = require('./utils/utilidade.js')
+const {pergunta} = require('./utils/input')
 
-
-// ORIGEM
-const adquirirOrigem = ()=>{
-
-  let origem = readline.question('Origem: ').toUpperCase();
-  if(origem === "SAIR") return validarEncerramento();
-
-  while(!cidades.includes(origem)){
-    console.log("Cidade não tabelada, por favor entre novamente.")
-    origem = readline.question('Origem: ').toUpperCase()
-  }
-  return origem
-}
+//ORIGEM
+const adquirirOrigem = pergunta("Origem: ", cidades, "Cidade não tabelada, por favor entre novamente.")
 
 // DESTINO
-const adquirirDestino = ()=>{
-  let destino = readline.question('Destino: ').toUpperCase()
-  if(destino === "SAIR") return validarEncerramento();
-
-  while(!cidades.includes(destino)){
-    console.log("Cidade não tabelada, por favor entre novamente.")
-    destino = readline.question('Destino: ').toUpperCase()
-  }
-  return destino
-}
+const adquirirDestino = pergunta("Destino: ", cidades, "Cidade não tabelada, por favor entre novamente.")
 
 // PORTE
 const adquirirPorte =()=>{
@@ -37,12 +18,12 @@ const adquirirPorte =()=>{
   }
   return porteDesejado
 }
+// const adquirirPorte = pergunta("Porte: ", arrayDePortes, "Portes desponiveis: pequeno, medio, grande")
 
 // Chamada leitura do usuario
-let origem = adquirirOrigem()
-let destino = adquirirDestino()
+let origem = adquirirOrigem
+let destino = adquirirDestino
 let porteDesejado = adquirirPorte();
-
 
 // Buscar dados cidade origem
 function buscarDados(origem) {
@@ -65,7 +46,6 @@ return arrDePrecos[indexDoPorte];
 
 // Funcao Calculo:
 const calculoTrechoModalidade = ()=>{
-
  let arrDadosOrigem = buscarDados(origem);
  let distancia = distanciaOrigemDestino(destino, arrDadosOrigem)
  let total = distancia * precoPorte(porteDesejado)
