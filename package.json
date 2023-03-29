@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/marinsfabio/teste-Dell-academia#readme",
   "dependencies": {
     "nodemon": "^2.0.22",
+    "python3": "^0.0.1",
     "readline-sync": "^1.4.10"
   }
 }
